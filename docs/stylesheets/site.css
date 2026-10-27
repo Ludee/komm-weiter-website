@@ -1,0 +1,193 @@
+/* ==========================================================================
+   Layout KommWeiter: macht aus dem Dokumentations-Theme eine Webseite.
+   Farben und Schriften kommen ausschließlich aus tokens.css.
+   ========================================================================== */
+
+body { font-family: var(--kw-font-text); }
+
+/* ---------- Kopfbereich: hell, flach, Logo statt Seitentitel ---------- */
+.md-header,
+.md-tabs {
+  background-color: var(--kw-paper);
+  color: var(--kw-ink);
+  box-shadow: none;
+}
+.md-header { border-bottom: 1px solid var(--kw-line); }
+.md-header--shadow { box-shadow: none; }
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg { height: 1.5rem; width: auto; }
+.md-header__button.md-logo { padding-top: .2rem; padding-bottom: .2rem; }
+.md-header__topic { display: none; }
+
+.md-tabs { border-bottom: 1px solid var(--kw-line); }
+.md-tabs__link {
+  font-size: .75rem;
+  opacity: 1;
+  color: var(--kw-ink);
+  margin-top: .7rem;
+}
+.md-tabs__item { height: 2.8rem; }
+.md-tabs__item--active .md-tabs__link {
+  color: var(--kw-primary);
+  font-weight: 700;
+  box-shadow: inset 0 -3px 0 var(--kw-primary);
+  padding-bottom: .55rem;
+}
+
+.md-search__input { background-color: var(--kw-surface); color: var(--kw-ink); }
+.md-search__input::placeholder,
+.md-search__icon { color: var(--kw-ink); }
+
+/* ---------- Typografie der Inhaltsseiten ---------- */
+.md-typeset {
+  font-size: .85rem;
+  line-height: 1.65;
+}
+.md-typeset p,
+.md-typeset ul,
+.md-typeset ol { max-width: 38em; }
+.md-typeset h1 {
+  font-family: var(--kw-font-display);
+  color: var(--kw-ink);
+  font-weight: 700;
+  font-size: 2.2em;
+  line-height: 1.15;
+  letter-spacing: -.01em;
+  margin-bottom: .6em;
+}
+.md-typeset h2 {
+  font-family: var(--kw-font-display);
+  font-weight: 700;
+  font-size: 1.45em;
+  line-height: 1.25;
+  margin-top: 2em;
+}
+.md-typeset h3 { font-weight: 700; font-size: 1.1em; }
+.md-typeset a { text-decoration: underline; text-underline-offset: .15em; }
+.md-typeset a:hover { text-decoration-thickness: 2px; }
+
+/* Lead-Absatz unter der Überschrift: { .kw-lead } */
+.md-typeset .kw-lead { font-size: 1.2em; line-height: 1.5; max-width: 32em; }
+
+/* ---------- Hero der Startseite ---------- */
+.kw-hero {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--kw-hero-bg);
+  color: var(--kw-hero-fg);
+}
+/* Mit Bild und Abdunkelung bleibt der Text weiß */
+.kw-hero--image { color: var(--kw-paper); }
+
+.kw-hero__inner {
+  padding: clamp(2.5rem, 7vw, 5.5rem) .8rem clamp(2.5rem, 6vw, 4.5rem);
+}
+.kw-hero__title {
+  font-family: var(--kw-font-display);
+  font-size: clamp(1.8rem, 4.6vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  max-width: 14em;
+  margin: 0 0 .5em;
+}
+.kw-hero__lead {
+  font-size: clamp(.85rem, 1.4vw, 1.05rem);
+  line-height: 1.5;
+  max-width: 34em;
+  margin: 0 0 1.6em;
+}
+.kw-hero__actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: 0; }
+
+.kw-button {
+  display: inline-block;
+  padding: .6em 1.2em;
+  font-size: .8rem;
+  font-weight: 700;
+  border-radius: .2rem;
+  border: 2px solid currentColor;
+  color: inherit;
+  text-decoration: none;
+}
+.kw-button:hover { background-color: rgba(255, 255, 255, .12); }
+.kw-button--primary {
+  background-color: var(--kw-signal);
+  border-color: var(--kw-signal);
+  color: var(--kw-ink);
+}
+.kw-button--primary:hover { background-color: var(--kw-signal); filter: brightness(1.06); }
+
+/* ---------- Startseite: Inhaltsbereiche ---------- */
+.md-typeset .kw-section { margin: 0 0 3.5rem; }
+.md-typeset .kw-section > h2:first-child { margin-top: 0; }
+
+/* Drei Einstiege: gleichrangig, durch Leitfarben-Linie markiert */
+.md-typeset .kw-entries {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+.md-typeset .kw-entries > div { border-top: 3px solid var(--kw-primary); padding-top: .8rem; }
+.md-typeset .kw-entries h3 { margin: 0 0 .4em; font-size: 1.2em; }
+.md-typeset .kw-entries h3 a { text-decoration: none; }
+.md-typeset .kw-entries h3 a:hover { text-decoration: underline; }
+.md-typeset .kw-entries p { margin: 0; }
+
+/* Partner und Zuständigkeiten */
+.md-typeset .kw-partners {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+.md-typeset .kw-partners h3 { margin-top: 0; }
+
+/* Hervorgehobener Hinweis, z. B. nächster Termin */
+.md-typeset .kw-note {
+  background-color: var(--kw-surface);
+  padding: 1.2rem 1.4rem;
+  border-left: 4px solid var(--kw-signal);
+}
+.md-typeset .kw-note > :first-child { margin-top: 0; }
+.md-typeset .kw-note > :last-child { margin-bottom: 0; }
+
+/* ---------- Fußbereich ---------- */
+.kw-footer {
+  background-color: var(--kw-surface);
+  color: var(--kw-ink);
+  font-size: .7rem;
+  border-top: 1px solid var(--kw-line);
+}
+.kw-footer__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) max-content minmax(0, 1fr);
+  gap: 2rem;
+  padding: 2.4rem .8rem;
+}
+.kw-footer__grid > :last-child { justify-self: end; }
+
+/* BMWE-Logo: weiße Fläche als Schutzzone, da der Fußbereich getönt ist */
+.kw-footer__funding-logo {
+  display: block;
+  width: 100%;
+  max-width: 8rem;
+  height: auto;
+  background-color: #ffffff;
+  padding: .8rem;
+}
+.kw-footer__heading { font-weight: 700; margin: 0 0 .5em; }
+.kw-footer__list { list-style: none; margin: 0; padding: 0; }
+.kw-footer__list li { margin: 0 0 .35em; }
+.kw-footer a { color: var(--kw-ink); }
+
+/* ---------- Bedienbarkeit ---------- */
+:focus-visible {
+  outline: 3px solid var(--kw-signal);
+  outline-offset: 2px;
+}
+
+@media screen and (max-width: 59.9844em) {
+  .md-typeset .kw-entries,
+  .md-typeset .kw-partners,
+  .kw-footer__grid { grid-template-columns: 1fr; }
+  .md-header__topic { display: block; }
+}

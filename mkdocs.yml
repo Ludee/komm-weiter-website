@@ -1,0 +1,93 @@
+site_name: KommWeiter
+site_description: Kommunale Wärmewende umsetzen – Synthese- und Transferprojekt im Förderaufruf „Vom Plan zur Wende“
+# Die URL kommt beim Deployment aus GitHub Pages (Variable SITE_URL).
+# Nach dem Umzug auf komm-weiter.info setzt GitHub sie automatisch; lokal greift der Fallback.
+site_url: !ENV [SITE_URL, "http://127.0.0.1:8000/"]
+copyright: KommWeiter – Reiner Lemoine Institut, Fraunhofer UMSICHT, IÖW
+
+use_directory_urls: true
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: de
+  logo: assets/logo-kommweiter-rgb_noborder.svg
+  favicon: assets/favicon.ico
+  # Keine Google Fonts: Schriften des Corporate Designs werden selbst gehostet (stylesheets/tokens.css)
+  font: false
+  palette:
+    scheme: default
+    primary: custom
+    accent: custom
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - content.tooltips
+
+extra_css:
+  - stylesheets/tokens.css
+  - stylesheets/site.css
+
+# Projektdaten an einer Stelle; Templates lesen sie aus config.extra
+extra:
+  generator: false
+  foerderhinweis: Gefördert durch das Bundesministerium für Wirtschaft und Energie aufgrund eines Beschlusses des Deutschen Bundestages
+  partner:
+    - name: Fraunhofer UMSICHT
+      url: https://www.umsicht.fraunhofer.de/
+    - name: Institut für ökologische Wirtschaftsforschung (IÖW)
+      url: https://www.ioew.de/
+    - name: Reiner Lemoine Institut
+      url: https://www.reiner-lemoine-institut.de/
+  legal:
+    - title: Impressum
+      path: impressum/
+    - title: Datenschutz
+      path: datenschutz/
+    - title: Barrierefreiheit
+      path: barrierefreiheit/
+
+plugins:
+  - search:
+      lang: de
+  - blog:
+      blog_dir: aktuelles
+      blog_toc: false
+      post_date_format: long
+      post_url_format: "{date}/{slug}"
+      archive: false
+      categories: false
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - tables
+  - toc:
+      permalink: false
+
+not_in_nav: |
+  /impressum.md
+  /datenschutz.md
+  /barrierefreiheit.md
+
+nav:
+  - Start: index.md
+  - Projekt: projekt/index.md
+  - Projekte: projekte/index.md
+  - Themen:
+      - themen/index.md
+      - themen/quartier.md
+      - themen/verwaltung.md
+      - themen/finanzierung.md
+      - themen/partizipation.md
+      - themen/energiesystem.md
+      - themen/daten.md
+      - themen/resilienz.md
+  - Praxiswissen: praxiswissen/index.md
+  - Termine: termine/index.md
+  - Aktuelles:
+      - aktuelles/index.md

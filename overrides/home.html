@@ -1,0 +1,28 @@
+{% extends "main.html" %}
+
+{#- Startseite: Hero aus dem Front Matter von docs/index.md, Inhalt aus dem Markdown darunter -#}
+{% block hero %}
+<section class="kw-hero{% if page.meta.hero_image %} kw-hero--image{% endif %}">
+  {% if page.meta.hero_image %}
+  <img class="kw-hero__image" src="{{ page.meta.hero_image | url }}" alt="" fetchpriority="high"
+       {% if page.meta.hero_image_position %}style="object-position: {{ page.meta.hero_image_position }}"{% endif %}>
+  {% endif %}
+  <div class="md-grid kw-hero__inner">
+    <h1 class="kw-hero__title">{{ page.meta.hero_title }}</h1>
+    <p class="kw-hero__lead">{{ page.meta.hero_lead }}</p>
+    {% if page.meta.hero_actions %}
+    <p class="kw-hero__actions">
+      {% for a in page.meta.hero_actions %}
+      <a class="kw-button{% if loop.first %} kw-button--primary{% endif %}" href="{{ a.link | url }}">{{ a.text }}</a>
+      {% endfor %}
+    </p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<div class="kw-home">
+  {{ page.content }}
+</div>
+{% endblock %}

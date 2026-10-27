@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{#- Eigener Fußbereich: Förderhinweis, Partner, Rechtliches. Inhalte stehen in mkdocs.yml unter extra. -#}
+{% block footer %}
+<footer class="kw-footer">
+  <div class="md-grid kw-footer__grid">
+    <div class="kw-footer__funding">
+      <img class="kw-footer__funding-logo"
+           src="{{ 'assets/BMWE_Fz_2025_WebSVG_de.svg' | url }}"
+           alt="{{ config.extra.foerderhinweis }}">
+    </div>
+    <div>
+      <p class="kw-footer__heading">Projektteam</p>
+      <ul class="kw-footer__list">
+        {% for p in config.extra.partner %}
+        <li><a href="{{ p.url }}">{{ p.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <p class="kw-footer__heading">Rechtliches</p>
+      <ul class="kw-footer__list">
+        {% for l in config.extra.legal %}
+        <li><a href="{{ l.path | url }}">{{ l.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</footer>
+{% endblock %}
