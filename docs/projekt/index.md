@@ -27,7 +27,7 @@ Das Fraunhofer-Institut für Umwelt-, Sicherheits- und Energietechnik UMSICHT in
 - Kommunale Zuständigkeiten
 - Unterstützungsmethoden und -formate
 
-[umsicht.fraunhofer.de](https://www.umsicht.fraunhofer.de/)
+[umsicht.fraunhofer.de](https://www.umsicht.fraunhofer.de/de/projekte/kommweiter-kommunale-waermewende.html)
 </div>
 
 <div markdown>
@@ -40,7 +40,7 @@ Das IÖW ist ein gemeinnütziges Forschungsinstitut mit Standorten in Berlin und
 - Akteurskooperation und Finanzierung
 - Partizipation und Akzeptanz
 
-[ioew.de](https://www.ioew.de/)
+[ioew.de](https://www.ioew.de/projekt/kommweiter_kommunale_waermewende_umsetzen)
 </div>
 
 <div markdown>
@@ -54,7 +54,7 @@ Das Reiner Lemoine Institut in Berlin ist ein gemeinnütziges Forschungsinstitut
 - Datenmanagement
 - Innerkommunaler Wissenstransfer für die Fortschreibung
 
-[reiner-lemoine-institut.de](https://www.reiner-lemoine-institut.de/)
+[reiner-lemoine-institut.de](https://reiner-lemoine-institut.de/projekt/kommweiter-kommunale-waermewende-umsetzen/)
 </div>
 
 </div>
