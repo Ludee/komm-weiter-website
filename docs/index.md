@@ -58,3 +58,17 @@ KommWeiter wertet aus, wie die geförderten Projekte diese Schritte gehen, ergä
 Die Online-Reihe Komm.InFahrt findet alle drei Monate statt und richtet sich an Kommunen und kommunale Akteure. [Zur Anmeldung bei Fraunhofer UMSICHT](https://www.umsicht.fraunhofer.de/de/messen-veranstaltungen/komminfahrt.html)
 
 </div>
+
+## Förderaufruf
+
+Mit dem Förderaufruf „Vom Plan zur Wende“ unterstützt das Bundesministerium für 
+Wirtschaft und Energie (BMWE) Forschung, die die Umsetzung kommunaler Wärmepläne beschleunigt. 
+Der Aufruf gehört zu den Forschungsmissionen Wärmewende 2045 und Energiesystem 2045 im 8. Energieforschungsprogramm.
+
+Gefördert werden Projekte in drei Modulen: 
+Vorbereitung von Umsetzungsprojekten im Quartier (Modul 1), 
+Energiesystemanalyse (Modul 2) und Synthese (Modul 3). 
+
+Das Projekt KommWeiter ist das Syntheseprojekt des Förderaufrufs.
+
+Informationen zur Antragstellung bietet [energieforschung.de](https://www.energieforschung.de/de/foerderung/foerderangebote/foerderaufruf-vom-plan-zur-wende). 
