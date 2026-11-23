@@ -141,6 +141,11 @@ body { font-family: var(--kw-font-text); }
 }
 .md-typeset .kw-partners h3 { margin-top: 0; }
 
+.md-typeset .kw-partners > div { display: flex; flex-direction: column; }
+.md-typeset .kw-partners ul { margin-top: .3em; padding-left: 1.1em; }
+.md-typeset .kw-partners ul li { margin-bottom: .2em; }
+.md-typeset .kw-partners > div > p:last-child { margin-top: auto; padding-top: .6em; }
+
 /* Hervorgehobener Hinweis, z. B. nächster Termin */
 .md-typeset .kw-note {
   background-color: var(--kw-surface);
