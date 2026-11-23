@@ -76,7 +76,7 @@ not_in_nav: |
 
 nav:
   - Start: index.md
-  - Projekt: projekt/index.md
+  - Über KommWeiter: projekt/index.md
   - Projekte: projekte/index.md
   - Themen:
       - themen/index.md
