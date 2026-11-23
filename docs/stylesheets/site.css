@@ -142,9 +142,10 @@ body { font-family: var(--kw-font-text); }
 .md-typeset .kw-partners h3 { margin-top: 0; }
 
 .md-typeset .kw-partners > div { display: flex; flex-direction: column; }
-.md-typeset .kw-partners ul { margin-top: .3em; padding-left: 1.1em; }
+.md-typeset .kw-partners > div > * { margin-top: 0; margin-bottom: .7em; }
+.md-typeset .kw-partners h3 { margin-bottom: .5em; }
 .md-typeset .kw-partners ul li { margin-bottom: .2em; }
-.md-typeset .kw-partners > div > p:last-child { margin-top: auto; padding-top: .6em; }
+.md-typeset .kw-partners > div > p:last-child { margin-top: auto; margin-bottom: 0; padding-top: .4em; }
 
 /* Hervorgehobener Hinweis, z. B. nächster Termin */
 .md-typeset .kw-note {
@@ -195,4 +196,5 @@ body { font-family: var(--kw-font-text); }
   .md-typeset .kw-partners,
   .kw-footer__grid { grid-template-columns: 1fr; }
   .md-header__topic { display: block; }
+  .kw-footer__grid > :last-child { justify-self: start; }
 }
