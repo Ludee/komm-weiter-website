@@ -40,7 +40,7 @@ Die Seite ist so angelegt, dass beim Umzug keine Inhalte geändert werden müsse
 
 Schritte:
 
-1. DNS beim Domain-Anbieter: für `komm-weiter.info` A-Records auf `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`; für `www` einen CNAME auf `<organisation>.github.io`.
+1. DNS beim Domain-Anbieter: für `komm-weiter.info` A-Records auf `185.199.XXX.XXX`; für `www` einen CNAME auf `<organisation>.github.io`.
 2. Settings › Pages › Custom domain: `komm-weiter.info` eintragen, nach der DNS-Prüfung „Enforce HTTPS“ aktivieren. Eine `CNAME`-Datei ist beim Deployment über Actions nicht nötig.
 3. Workflow erneut ausführen. Aufrufe der alten github.io-Adresse leitet GitHub auf die Domain um.
 4. Domain zusätzlich in den Organisationseinstellungen verifizieren (schützt vor Übernahme durch fremde Repositories).
